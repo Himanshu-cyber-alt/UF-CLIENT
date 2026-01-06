@@ -18,12 +18,13 @@ export const googleRegister = createAsyncThunk(
       const idToken = await result.user.getIdToken();
 
       const res = await axios.post(
-        "https://uf-server.onrender.com/api/auth/google-register",
+        "https://uf-server.onrender.com/api/google-register",
         { token: idToken }
       );
 
       return res.data; // { user, token }
     } catch (err) {
+      
       return rejectWithValue(err.response?.data || err.message);
     }
   }

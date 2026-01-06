@@ -47,7 +47,7 @@ export default function Login() {
         setError("Google login failed. Try again.");
       }
     } catch (err) {
-      setError("Google login failed. Please try again later.");
+       setError("Google login failed. Please try again later.");
     }
   };
 
